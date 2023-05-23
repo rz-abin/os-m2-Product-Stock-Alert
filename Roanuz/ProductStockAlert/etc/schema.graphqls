@@ -1,0 +1,14 @@
+type Mutation {
+ 
+
+    rzCreateStockAlert(
+        sku: String!,
+        cutomerEmail: String!,
+    ): RZStockAlertResponse
+    @resolver(class: "Roanuz\\Utils\\Model\\Resolver\\StockAlert")
+}
+
+type RZStockAlertResponse {
+    msg: String
+    status: Boolean!
+}
